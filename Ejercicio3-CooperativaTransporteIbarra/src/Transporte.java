@@ -4,10 +4,11 @@ import java.time.LocalTime;
 
 public class Transporte {
 
+    private Object [] asientos;
     private String ruta;
     private LocalDate fechaSalida;
     private LocalTime horaSalida;
-    private int capacidad;
+    private int asientosOcupados;
     private double tarifaBase;
     
     public Transporte (String ruta,LocalDate fechDateSalida,LocalTime horaSalida,int capacidad,int tarifaBase)
@@ -15,10 +16,38 @@ public class Transporte {
         this.ruta = ruta;
         this.fechaSalida = fechDateSalida;
         this.horaSalida = horaSalida;
-        this.capacidad = capacidad;
+        this.asientos = new Object [capacidad];
         this.tarifaBase = tarifaBase;
+        this.asientosOcupados = 0;
+        RegistroAsientos();
+    }
+
+    private void RegistroAsientos()
+    {
+        for (int i = 0; i < asientos.length; i++) {
+            this.asientos[i] = new Asiento(i+1);
+        }
+    }
+
+    public void setAsientosDisponibles(int numAsientos)
+    { 
+        if (numAsientos > 0 && numAsientos <= CalcularAsientosDisponibles()) {
+            asientosOcupados+=numAsientos;
+        }
     }
     
+    
+    public LocalDate getFechaSalida() {
+        return fechaSalida;
+    }
+
+    public LocalTime getHoraSalida() {
+        return horaSalida;
+    }
+
+    public Object [] getAsientos() {
+        return this.asientos;
+    }
     public double CalcularTarifa(String tipoViaje)
     {        
         if (tipoViaje == null || tipoViaje.isEmpty() )
@@ -37,5 +66,20 @@ public class Transporte {
             default:
                 return 0;
            }
-    }      
+        }
+        public int CalcularAsientosDisponibles()
+        {
+            return (this.asientos.length) - asientosOcupados;
+        }    
+          
+        public String MostrarAsientosDisponibles()
+        {
+            String r= "";
+            Asiento  a;
+            for (int i = 0; i < asientos.length; i++) {
+                a =  (Asiento)asientos[i];
+                r+= "["+a.getNumAsiento()+" - "+ a.getEstado()+"] - ";
+            }
+            return r;
+        } 
 }
