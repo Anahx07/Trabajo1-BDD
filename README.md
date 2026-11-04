@@ -12,7 +12,7 @@
 - Emely Colta
 - Marilin Martinez
 - Integrante 3
-- Integrante 4
+- Jeremy Luna
 - Integrante 5
 - Integrante 6
 
@@ -75,7 +75,7 @@ base_datos/
 
 # \- Integrante 3
 
-# \- Integrante 4
+# \- Jeremy Luna
 
 # \- Mateo Pupiales
 
