@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 public class App {
     public static void main(String[] args) throws Exception {
 
-        
+        /* 
         String nombreCarpeta = "Ejercicio3-CooperativaTransporteIbarra/data";
         String nombreArchivo = nombreCarpeta + "/datos_cooperativa.txt";
 
@@ -47,9 +47,7 @@ public class App {
         System.out.println("   DEMOSTRACION DE TODOS LOS CASOS DE PRUEBA - EJERCICIO 3 (COOPERATIVA)");
         System.out.println("======================================================================\n");
 
-        // ----------------------------------------------------------------------------------
         // REGLA 1: Registro de Viajes y Rutas (Ibarra-Quito, Ibarra-Tulcán, Ibarra-Otavalo)
-        // ----------------------------------------------------------------------------------
         System.out.println("[CASO 1] Registro de un nuevo viaje en la cooperativa");
         System.out.println(" > Ruta asignada: " + busQuito.getRuta());
         System.out.println(" > Fecha de salida: " + busQuito.getFechaSalida() + " | Hora: " + busQuito.getHoraSalida());
@@ -58,9 +56,7 @@ public class App {
         System.out.println(" ESTADO: PRUEBA EXITOSA\n");
         System.out.println("----------------------------------------------------------------------\n");
 
-        // ----------------------------------------------------------------------------------
         // REGLA 2: Venta de Boletos y Estructura tarifaria (Directo, Intermedio, Especial)
-        // ----------------------------------------------------------------------------------
         System.out.println("[CASO 2] Venta de boleto con tarifa Directa (D - 100%)");
         int v1 = cooperativa.VenderBoleto("Ibarra-Quito", fechaManana, horaManana, "D", 1);
         System.out.println(" > Asiento seleccionado: 1");
@@ -85,9 +81,7 @@ public class App {
         System.out.println(" ESTADO: PRUEBA EXITOSA\n");
         System.out.println("----------------------------------------------------------------------\n");
 
-        // ----------------------------------------------------------------------------------
         // REGLA 3: Restricción - No vender asientos ocupados o rangos inválidos
-        // ----------------------------------------------------------------------------------
         System.out.println("[CASO 5] Intento de venta en asiento ya ocupado");
         int vOcupado = cooperativa.VenderBoleto("Ibarra-Quito", fechaManana, horaManana, "D", 1);
         System.out.println(" > Intento comprar asiento 1 (ya asignado)");
@@ -102,9 +96,7 @@ public class App {
         System.out.println(" ESTADO: RESTRICCION APLICADA CORRECTAMENTE\n");
         System.out.println("----------------------------------------------------------------------\n");
 
-        // ----------------------------------------------------------------------------------
         // REGLA 4: Restricción - No vender boletos para un viaje ya realizado/salido
-        // ----------------------------------------------------------------------------------
         System.out.println("[CASO 7] Intento de venta de boleto para un viaje expirado/pasado");
         int vExpirado = cooperativa.VenderBoleto("Ibarra-Otavalo", fechaPasada, horaPasada, "D", 1);
         System.out.println(" > Fecha del viaje: " + fechaPasada + " (Pasada)");
@@ -112,9 +104,7 @@ public class App {
         System.out.println(" ESTADO: RESTRICCION APLICADA CORRECTAMENTE\n");
         System.out.println("----------------------------------------------------------------------\n");
 
-        // ----------------------------------------------------------------------------------
         // REGLA 5: Anulación de Boletos (Dentro del tiempo permitido - 2h antes)
-        // ----------------------------------------------------------------------------------
         System.out.println("[CASO 8] Anulación exitosa de boleto (Dentro del tiempo límite)");
         boolean anuladoOk = cooperativa.AnularBoleto("Ibarra-Quito", fechaManana, 2);
         System.out.println(" > Anulando asiento: 2");
@@ -122,9 +112,7 @@ public class App {
         System.out.println(" ESTADO: ANULACION EXITOSA\n");
         System.out.println("----------------------------------------------------------------------\n");
 
-        // ----------------------------------------------------------------------------------
         // REGLA 6: Restricción - Evitar doble anulación del mismo boleto
-        // ----------------------------------------------------------------------------------
         System.out.println("[CASO 9] Intento de re-anular el mismo boleto");
         boolean reAnulado = cooperativa.AnularBoleto("Ibarra-Quito", fechaManana, 2);
         System.out.println(" > Anulando asiento 2 por segunda vez");
@@ -132,9 +120,7 @@ public class App {
         System.out.println(" ESTADO: RESTRICCION APLICADA CORRECTAMENTE\n");
         System.out.println("----------------------------------------------------------------------\n");
 
-        // ----------------------------------------------------------------------------------
         // REPORTES Y AUDITORÍAS REQUERIDAS
-        // ----------------------------------------------------------------------------------
         System.out.println("[CASO 10] Reporte: Mapa de Asientos, Asientos Libres y Ocupación");
         System.out.println(" > Mapa de asientos disponibles: " + busQuito.MostrarAsientosDisponibles());
         System.out.println(" > Cantidad asientos libres: " + busQuito.CalcularAsientosDisponibles());
@@ -154,7 +140,7 @@ public class App {
         cooperativa.guardarDatosEnArchivo(nombreArchivo);
         System.out.println(" [SISTEMA] Persistencia de datos finalizada en '" + nombreArchivo + "'");
         System.out.println("======================================================================");
-         
+         */
     }
     
 }
