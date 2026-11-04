@@ -1,0 +1,27 @@
+========================================================================================================================
+                      CASOS DE PRUEBA - EJERCICIO 2
+                COOPERATIVA DE AHORRO Y CREDITO
+========================================================================================================================
+
+| ID     | CASO                                              | ESPERADO                             | RESULTADO REAL |
+|--------|---------------------------------------------------|--------------------------------------|----------------|
+| CP-01  | Depositar $0 en AH-0001                           | Rechazar                             | RECHAZADA: monto debe ser mayor que cero |
+| CP-02  | Retirar -$10 en AH-0001                           | Rechazar                             | RECHAZADA: monto debe ser mayor que cero |
+| CP-03  | Retirar $1 en AH-0003 (saldo 5.00)                | Rechazar (mínimo $5)                 | RECHAZADA: quedaría en $4.00 |
+| CP-04  | Retirar $350 en CC-0001 (saldo 180)               | Aceptar (sobregiro)                  | ACEPTADA, saldo -170.00 |
+| CP-05  | Retirar $50 más en CC-0001                        | Rechazar (> $200)                    | RECHAZADA: quedaría en -$220.00 |
+| CP-06  | Acreditar intereses 2026-10                       | Total $6.02                          | ACEPTADA, total $6.02 |
+| CP-06b | Repetir acreditación del mismo mes                | No duplicar                          | ACEPTADA, total $0.00 |
+| CP-07  | Transferir $150 AH-0001 -> AH-0002                | Aceptar                              | ACEPTADA (retiro + depósito) |
+| CP-08  | Transferir AH-0001 -> AH-0001                     | Rechazar                             | RECHAZADA: misma cuenta |
+| CP-09  | Transferir $10 desde AH-0003                      | Rechazar                             | RECHAZADA: fondos insuficientes |
+| CP-10  | Transferir $20 AH-0001 -> AH-0004 inactiva        | Rechazar y revertir                  | RECHAZADA; saldo restaurado correctamente |
+| CP-11  | Transferir $5000 AH-0002 -> CC-0002               | Rechazar                             | RECHAZADA: fondos insuficientes |
+| CP-12  | Cerrar AH-0001 (saldo 502.17)                     | Rechazar                             | RECHAZADA: saldo distinto de cero |
+| CP-13  | Abrir CC-0003 sin movimientos y cerrarla          | Eliminar                             | Eliminada: true |
+| CP-14  | Retirar todo de AH-0003 y cerrarla                | Inactiva, no eliminada               | Eliminada: false, INACTIVA |
+| CP-15  | Depositar en AH-0003 inactiva                     | Rechazar                             | RECHAZADA: cuenta inactiva |
+| CP-16  | Abrir ahorro con $3                               | Rechazar                             | RECHAZADA: mínimo $5.00 |
+| CP-17  | Auditoría con datos de prueba                     | 0 errores                            | 6 cuentas, 0 errores, suma $1,855.00 |
+| CP-18  | Auditoría tras editar cuentas.txt                 | Detectar inconsistencia              | ERROR: saldo no coincide con movimientos |
+| CP-19  | Totales 2026-10-01 a 2026-11-30                   | Calcular totales                     | Depositado $680.00, retirado $980.02 |

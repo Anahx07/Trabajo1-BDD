@@ -10,13 +10,13 @@
 
 # \- Marilin Martinez
 
-# \- Integrante 3
+# \- Tupak Cachimuel
 
-# \- Integrante 4
+# \- Angel Liquinchano
 
-# \- Integrante 5
+# \- Mateo Pupiales
 
-# \- Integrante 6
+# \- Jeremy 
 
 # 
 

@@ -1,5 +1,9 @@
-build/ 
-dist/ 
-*.class 
-nbproject/private/ 
-/ejercicio2/Ejercicio2Cooperativa/nbproject/private/
+build/
+dist/
+*.class
+
+**/build/
+**/dist/
+
+nbproject/private/
+*/nbproject/private/
