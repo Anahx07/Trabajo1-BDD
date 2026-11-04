@@ -1,0 +1,4 @@
+# id;nombre;cedula
+1;Maria Andrade;1002345678
+2;Carlos Cevallos;1003456789
+3;Lucia Farinango;1004567890

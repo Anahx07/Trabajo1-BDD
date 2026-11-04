@@ -1,0 +1,7 @@
+# numero;tipo;idSocio;saldo;activa
+AH-0001;AHORRO;1;650.00;true
+CC-0001;CORRIENTE;1;180.00;true
+AH-0002;AHORRO;2;1150.00;true
+CC-0002;CORRIENTE;2;-130.00;true
+AH-0003;AHORRO;3;5.00;true
+AH-0004;AHORRO;3;0.00;false
