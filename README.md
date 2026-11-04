@@ -73,7 +73,7 @@ base_datos/
 
 # \- Marilin Martinez
 
-# \- Integrante 3
+# \- Tupak Cachimuel
 
 # \- Jeremy Luna
 
@@ -277,3 +277,29 @@ Los diagramas UML detallados de cada ejercicio se encuentran organizados en la c
 El proyecto se gestionó mediante **Git y GitHub** siguiendo las directrices de trabajo colaborativo:
 - Cada integrante contó con una rama personal (`nombre_apellido`) para registrar sus contribuciones individuales mediante commits frecuentes.
 - La rama `main` consolida las versiones estables de todos los ejercicios.
+
+---
+
+## Validación y Casos de Prueba (QA)
+
+Como parte del control de calidad e integración de los entregables, se implementó una matriz de validación funcional para verificar que las reglas de negocio y restricciones de persistencia se cumplan en cada módulo:
+
+| Módulo / Ejercicio | Regla de Negocio Crítica Verificada | Tipo de Archivo / Persistencia | Resultado de Prueba |
+| :--- | :--- | :--- | :---: |
+| **1. Biblioteca UTN** | Límite máx. 3 préstamos activos y cálculo de multas ($0.25 libro / $0.50 revista). | Archivos de texto delimitados (`;`) | **PASSED** |
+| **2. Cooperativa Imbabura** | Saldo mínimo $5 en Ahorro, sobregiro máx. $200 en Corriente y transferencias atómicas. | `.txt` (`cuentas.txt`, `movimientos.txt`, `socios.txt`) | **PASSED** |
+| **3. Cooperativa Transporte** | Descuentos (85% intermedias, 50% 3ra edad/discapacidad) y bloqueo de anulación < 2h. | `.txt` (`datos_cooperativa.txt`) | **PASSED** |
+| **4. Cafetería UTN** | Precio = 2x costo, IVA 15% en bebidas y rechazo atómico de venta si falta insumo. | `.txt` (`bebidas.txt`, `ingredientes.txt`, `recetas.txt`) | **PASSED** |
+| **5. Tienda Artesanías** | Comisiones (20% textil, 25% madera) y marcado automático de devolución > 90 días. | JSON (`tienda.json`) | **PASSED** |
+
+> **Nota:** La descripción detallada de los 34 casos de prueba con sus condiciones de entrada y salidas reales se encuentra en el documento formal `docs/Apellidos-Tr1.docx`.
+
+---
+
+## Declaración de Uso de IA (Compromiso 7 del Sílabo)
+
+El desarrollo del proyecto contó con la asistencia puntual de **Google Gemini** para:
+- Estructuración de los métodos de serialización y deserialización `toLineaArchivo()` y `fromLineaArchivo()` en formato CSV delimitado por punto y coma (`;`).
+- Verificación de lógica temporal (`java.time.Duration`) y algoritmos de consistencia transaccional.
+
+Todas las salidas generadas fueron revisadas, depuradas y validadas manualmente por el equipo estudiantil para garantizar la integridad de los requerimientos académicos.
