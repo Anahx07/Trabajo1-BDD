@@ -14,7 +14,7 @@
 
 # \- Integrante 4
 
-# \- Integrante 5
+# \- Mateo Pupiales
 
 # \- Integrante 6
 
