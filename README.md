@@ -11,10 +11,10 @@
 
 - Emely Colta
 - Marilin Martinez
-- Integrante 3
+- Tupak Cachimuel
 - Jeremy Luna
-- Integrante 5
-- Integrante 6
+- Angel Liquinchano
+- Mateo Pupiales
 
 ---
 
