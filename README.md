@@ -292,7 +292,6 @@ Como parte del control de calidad e integración de los entregables, se implemen
 | **4. Cafetería UTN** | Precio = 2x costo, IVA 15% en bebidas y rechazo atómico de venta si falta insumo. | `.txt` (`bebidas.txt`, `ingredientes.txt`, `recetas.txt`) | **PASSED** |
 | **5. Tienda Artesanías** | Comisiones (20% textil, 25% madera) y marcado automático de devolución > 90 días. | JSON (`tienda.json`) | **PASSED** |
 
-> **Nota:** La descripción detallada de los 34 casos de prueba con sus condiciones de entrada y salidas reales se encuentra en el documento formal `docs/Apellidos-Tr1.docx`.
 
 ---
 
