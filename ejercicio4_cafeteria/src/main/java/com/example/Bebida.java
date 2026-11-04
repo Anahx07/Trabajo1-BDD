@@ -5,7 +5,7 @@
         private String id;
         private String nombre;
         private double precioBase;
-        private int stock; // Unidades enteras
+        private int stock; 
     
         public Bebida(String id, String nombre, double precioBase, int stock) {
             this.id = id;
@@ -20,7 +20,7 @@
         public int getStock() { return stock; }
     
         public double getPrecioFinalConIVA() {
-            return this.precioBase * 1.15; // IVA 15 %
+            return this.precioBase * 1.15; 
         }
     
         public void abastecer(int cantidad) {
