@@ -1,3 +1,6 @@
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -6,8 +9,15 @@ import java.time.format.DateTimeFormatter;
 public class App {
     public static void main(String[] args) throws Exception {
 
+        String nombreCarpeta = "Ejercicio3-CooperativaTransporteIbarra/data";
+        String nombreArchivo = nombreCarpeta + "/datos_cooperativa.txt";
+
+        Path rutaCarpeta = Paths.get(nombreCarpeta);
+        if (!Files.exists(rutaCarpeta)) {
+            Files.createDirectories(rutaCarpeta);
+        }
+
         CooperativaTransporteIbarra cooperativa = new CooperativaTransporteIbarra();
-        String nombreArchivo = "datos_cooperativa.txt";
 
         cooperativa.cargarDatosDesdeArchivo(nombreArchivo);
 
