@@ -2,31 +2,21 @@ package com.example;
 
 public class DetalleReceta {
     private Ingrediente ingrediente;
-    private double cantidadNecesaria;
+    private double cantidad;
 
-    public DetalleReceta(Ingrediente ingrediente, double cantidadNecesaria) {
+    public DetalleReceta(Ingrediente ingrediente, double cantidad) {
         this.ingrediente = ingrediente;
-        this.cantidadNecesaria = cantidadNecesaria;
+        this.cantidad = cantidad;
     }
 
-    public Ingrediente getIngrediente() { 
-        return ingrediente; 
+    public Ingrediente getIngrediente() { return ingrediente; }
+    public double getCantidad() { return cantidad; }
+
+    public double getSubtotalCosto() {
+        return ingrediente.getCostoUnitario() * cantidad;
     }
 
-    public void setIngrediente(Ingrediente ingrediente) {
-        this.ingrediente = ingrediente;
-    }
-
-    public double getCantidadNecesaria() { 
-        return cantidadNecesaria; 
-    }
-
-    public void setCantidadNecesaria(double cantidadNecesaria) {
-        this.cantidadNecesaria = cantidadNecesaria;
-    }
-
-    // Calcula el costo de este ingrediente en la receta
-    public double calcularSubtotal() {
-        return ingrediente.getCostoUnitario() * cantidadNecesaria;
+    public String toCSV(String platoId) {
+        return String.format("%s;%s;%.4f", platoId, ingrediente.getId(), cantidad);
     }
 }
