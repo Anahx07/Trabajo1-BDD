@@ -10,6 +10,7 @@ public class Transporte {
     private LocalTime horaSalida;
     private int asientosOcupados;
     private double tarifaBase;
+    private int boletosAnulados;
     
     public Transporte (String ruta,LocalDate fechDateSalida,LocalTime horaSalida,int capacidad,int tarifaBase)
     {
@@ -19,14 +20,6 @@ public class Transporte {
         this.asientos = new Object [capacidad];
         this.tarifaBase = tarifaBase;
         this.asientosOcupados = 0;
-        RegistroAsientos();
-    }
-
-    private void RegistroAsientos()
-    {
-        for (int i = 0; i < asientos.length; i++) {
-            this.asientos[i] = new Asiento(i+1);
-        }
     }
 
     public void setAsientosDisponibles(int numAsientos)
@@ -35,7 +28,19 @@ public class Transporte {
             asientosOcupados+=numAsientos;
         }
     }
+
     
+    public String getRuta() {
+        return ruta;
+    }
+
+    public void registrarAnulacion() {
+        this.boletosAnulados++;
+    }
+
+    public int getBoletosAnulados() {
+        return boletosAnulados;
+    }
     
     public LocalDate getFechaSalida() {
         return fechaSalida;
@@ -44,10 +49,11 @@ public class Transporte {
     public LocalTime getHoraSalida() {
         return horaSalida;
     }
-
-    public Object [] getAsientos() {
-        return this.asientos;
+    
+    public Object[] getAsientos() {
+        return asientos;
     }
+
     public double CalcularTarifa(String tipoViaje)
     {        
         if (tipoViaje == null || tipoViaje.isEmpty() )
@@ -75,10 +81,13 @@ public class Transporte {
         public String MostrarAsientosDisponibles()
         {
             String r= "";
-            Asiento  a;
+            Boleto  b;
             for (int i = 0; i < asientos.length; i++) {
-                a =  (Asiento)asientos[i];
-                r+= "["+a.getNumAsiento()+" - "+ a.getEstado()+"] - ";
+                b =  (Boleto)asientos[i];
+                if (b == null) {
+                    r+= "["+(i+1)+"] - ";
+                }
+                
             }
             return r;
         } 
