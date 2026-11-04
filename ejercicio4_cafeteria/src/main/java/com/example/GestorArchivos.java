@@ -3,9 +3,17 @@ package com.example;
 import java.io.*;
 
 public class GestorArchivos {
+    private static final String RUTA_DATOS = "datos" + File.separator;
+
+    private static void asegurarCarpeta() {
+        File carpeta = new File("datos");
+        if (!carpeta.exists()) {
+            carpeta.mkdirs();
+        }
+    }
     public static void guardarDatos(GestorCafeteria gestor) {
-        
-        try (PrintWriter pw = new PrintWriter(new FileWriter("ingredientes.txt"))) {
+        asegurarCarpeta();
+        try (PrintWriter pw = new PrintWriter(new FileWriter(RUTA_DATOS + "ingredientes.txt"))) {
             for (Ingrediente i : gestor.getIngredientes().values()) {
                 pw.println(i.toCSV());
             }
@@ -14,15 +22,15 @@ public class GestorArchivos {
         }
 
       
-        try (PrintWriter pw = new PrintWriter(new FileWriter("bebidas.txt"))) {
+        try (PrintWriter pw = new PrintWriter(new FileWriter(RUTA_DATOS + "bebidas.txt"))) {
             for (Bebida b : gestor.getBebidas().values()) {
                 pw.println(b.toCSV());
             }
         } catch (IOException e) {
             System.err.println("Error guardando bebidas: " + e.getMessage());
         }
-        try (PrintWriter pwPlatos = new PrintWriter(new FileWriter("platos.txt"));
-             PrintWriter pwRecetas = new PrintWriter(new FileWriter("recetas.txt"))) {
+        try (PrintWriter pwPlatos = new PrintWriter(new FileWriter(RUTA_DATOS + "platos.txt"));
+             PrintWriter pwRecetas = new PrintWriter(new FileWriter(RUTA_DATOS + "recetas.txt"))) {
             for (Plato p : gestor.getPlatos().values()) {
                 pwPlatos.println(p.toCSV());
                 for (DetalleReceta d : p.getReceta()) {
@@ -35,7 +43,7 @@ public class GestorArchivos {
     }
 
     public static void cargarDatos(GestorCafeteria gestor) {
-        File fIng = new File("ingredientes.txt");
+        File fIng = new File(RUTA_DATOS + "ingredientes.txt");
         if (fIng.exists()) {
             try (BufferedReader br = new BufferedReader(new FileReader(fIng))) {
                 String linea;
@@ -54,7 +62,7 @@ public class GestorArchivos {
             }
         }
 
-        File fBeb = new File("bebidas.txt");
+        File fBeb = new File(RUTA_DATOS + "bebidas.txt");
         if (fBeb.exists()) {
             try (BufferedReader br = new BufferedReader(new FileReader(fBeb))) {
                 String linea;
