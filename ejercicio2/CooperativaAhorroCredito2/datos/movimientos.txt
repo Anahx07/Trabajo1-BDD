@@ -1,0 +1,22 @@
+# numeroCuenta;fecha;tipo;monto;saldoDespues;porTransferencia;descripcion
+AH-0001;2026-09-01;DEPOSITO;500.00;500.00;false;Apertura de cuenta
+AH-0001;2026-09-15;RETIRO;100.00;400.00;false;Retiro en ventanilla
+AH-0001;2026-10-05;DEPOSITO;250.00;650.00;false;Deposito en ventanilla
+AH-0001;2026-11-01;INTERES;2.17;652.17;false;Interes 2026-10
+AH-0001;2026-11-02;RETIRO;150.00;502.17;true;Transferencia a AH-0002
+CC-0001;2026-09-02;DEPOSITO;300.00;300.00;false;Apertura de cuenta
+CC-0001;2026-10-10;RETIRO;120.00;180.00;false;Retiro en ventanilla
+CC-0001;2026-11-01;RETIRO;350.00;-170.00;false;Retiro en ventanilla
+AH-0002;2026-09-03;DEPOSITO;1000.00;1000.00;false;Apertura de cuenta
+AH-0002;2026-10-12;DEPOSITO;200.00;1200.00;false;Deposito en ventanilla
+AH-0002;2026-10-20;RETIRO;50.00;1150.00;false;Retiro en ventanilla
+AH-0002;2026-11-01;INTERES;3.83;1153.83;false;Interes 2026-10
+AH-0002;2026-11-02;DEPOSITO;150.00;1303.83;true;Transferencia de AH-0001
+CC-0002;2026-09-04;DEPOSITO;100.00;100.00;false;Apertura de cuenta
+CC-0002;2026-10-08;RETIRO;230.00;-130.00;false;Retiro con sobregiro
+AH-0003;2026-10-01;DEPOSITO;80.00;80.00;false;Apertura de cuenta
+AH-0003;2026-10-15;RETIRO;75.00;5.00;false;Retiro en ventanilla
+AH-0003;2026-11-01;INTERES;0.02;5.02;false;Interes 2026-10
+AH-0003;2026-11-03;RETIRO;5.02;0.00;false;Retiro en ventanilla
+AH-0004;2026-09-10;DEPOSITO;20.00;20.00;false;Apertura de cuenta
+AH-0004;2026-09-25;RETIRO;20.00;0.00;false;Retiro total y cierre
