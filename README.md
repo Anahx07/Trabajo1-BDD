@@ -67,9 +67,6 @@ base_datos/
 - **Herramienta de compilación:** Apache Ant (integrada en Apache NetBeans).
 - **Control de versiones:** Git.
 
-<<<<<<< HEAD
----
-=======
 # 
 
 # \- Emely Colta
@@ -193,7 +190,6 @@ base_datos/
 # 
 
 # El desarrollo del proyecto se realizó mediante Git y GitHub, utilizando ramas individuales para cada integrante y registrando los avances mediante commits.
->>>>>>> e1a185d57a9a5a0e42f41a438b94745b3a9fe172
 
 ## Instrucciones para Compilar y Ejecutar
 
@@ -260,17 +256,6 @@ java -cp build/classes ejercicio1bdd.Main
 
 ---
 
-## Mapeo de Proyectos y Clases Principales
-
-| Ejercicio | Tema Principal | Ubicación del Proyecto | Clase Principal / Ejecutable |
-| :---: | :--- | :--- | :--- |
-| **Ejercicio 1** | Biblioteca UTN (Préstamo de Libros y Revistas) | `ejercicio1/Ejercicio1BDD-Biblioteca_UTN-Prestamo_libros` | `ejercicio1bdd.Main` |
-| **Ejercicio 2** | Cooperativa de Ahorro y Crédito | `ejercicio2/Ejercicio2Cooperativa` | `ejercicio2cooperativa.Ejercicio2Cooperativa` |
-| **Ejercicio 3** | Cooperativa de Transporte (Boletos) | `ejercicio3/...` | `ejercicio3transporte.Main` |
-| **Ejercicio 4** | Cafetería UTN (Platos y Recetas) | `ejercicio4/...` | `ejercicio4cafeteria.Main` |
-| **Ejercicio 5** | Tienda de Artesanías (Consignación) | `ejercicio5/...` | `ejercicio5tienda.Main` |
-
----
 
 ## Persistencia de Datos en Archivos
 
@@ -284,107 +269,6 @@ Cada ejercicio almacena y recupera su estado utilizando archivos de texto plano 
 ## Diagramas de Clases (UML)
 
 Los diagramas UML detallados de cada ejercicio se encuentran organizados en la carpeta `docs/diagramas/`.
-
-### Arquitectura de Clases - Ejercicio 1 (Biblioteca UTN):
-
-```mermaid
-classDiagram
-    direction TB
-
-    class Libros {
-        -String id
-        -String titulo
-        -String autor
-        -String editorial
-        -int anioPublicacion
-        -int ejemplaresTotales
-        -int ejemplaresDisponibles
-        +DIAS_PRESTAMO: 7
-        +MULTA_POR_DIA: 0.25
-        +hayDisponibles(): boolean
-        +prestarEjemplar(): boolean
-        +devolverEjemplar(): boolean
-        +calcularMulta(dias): double
-        +toLineaArchivo(): String
-        +fromLineaArchivo(linea): Libros
-    }
-
-    class Revistas {
-        -String id
-        -String titulo
-        -int numeroEdicion
-        -String issn
-        -int anioPublicacion
-        -int ejemplaresTotales
-        -int ejemplaresDisponibles
-        +DIAS_PRESTAMO: 3
-        +MULTA_POR_DIA: 0.50
-        +hayDisponibles(): boolean
-        +prestarEjemplar(): boolean
-        +devolverEjemplar(): boolean
-        +calcularMulta(dias): double
-        +toLineaArchivo(): String
-        +fromLineaArchivo(linea): Revistas
-    }
-
-    class Ejemplar {
-        -String codigoEjemplar
-        -String idMaterial
-        -String tipoMaterial
-        -String tituloMaterial
-        -boolean disponible
-        -String ubicacion
-        +prestar(): boolean
-        +devolver(): boolean
-        +isDisponible(): boolean
-        +toLineaArchivo(): String
-        +fromLineaArchivo(linea): Ejemplar
-    }
-
-    class Usuario {
-        -String idUsuario
-        -String nombre
-        -String correo
-        -String carrera
-        -int prestamosActivos
-        -double multaPendiente
-        +MAX_PRESTAMOS_ACTIVOS: 3
-        +puedePrestar(): boolean
-        +incrementarPrestamos(): boolean
-        +decrementarPrestamos(): void
-        +agregarMulta(monto): void
-        +pagarMulta(monto): double
-        +toLineaArchivo(): String
-        +fromLineaArchivo(linea): Usuario
-    }
-
-    class Prestamo {
-        -String idPrestamo
-        -String idUsuario
-        -String codigoEjemplar
-        -String idMaterial
-        -String tituloMaterial
-        -String tipoMaterial
-        -LocalDate fechaPrestamo
-        -LocalDate fechaLimite
-        -LocalDate fechaDevolucion
-        -String estado
-        -int diasRetraso
-        -double multaGenerada
-        +isDevuelto(): boolean
-        +isActivo(): boolean
-        +isVencido(fecha): boolean
-        +calcularDiasRetraso(fecha): int
-        +registrarDevolucion(fecha): boolean
-        +toLineaArchivo(): String
-        +fromLineaArchivo(linea): Prestamo
-    }
-
-    Usuario "1" --> "0..3" Prestamo : solicita
-    Prestamo "1" --> "1" Ejemplar : asigna
-    Ejemplar "1..*" --> "1" Libros : referencia
-    Ejemplar "1..*" --> "1" Revistas : referencia
-```
 
 ---
 
