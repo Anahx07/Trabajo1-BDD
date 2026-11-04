@@ -60,15 +60,11 @@ public class Transporte {
         }
 
         switch (tipoViaje.toUpperCase()) {
-            case "DIRECTO": // O las abreviaturas que manejes
             case "D":
                 return this.tarifaBase;
-            case "INTERMEDIO":
             case "I":
                 return this.tarifaBase * 0.85;
-            case "DISCAPACIDAD":
-            case "TERCERA_EDAD":
-            case "E": // Descuento especial
+            case "E":
                 return this.tarifaBase * 0.50;
             default:
                 return this.tarifaBase;
