@@ -1,5 +1,4 @@
-
-    package com.example;
+package com.example;
     
     public class Bebida {
         private String id;
