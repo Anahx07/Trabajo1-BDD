@@ -1,2 +1,4 @@
 A001,1000,true
 C001,500,trues
+A002,15,true
+C002,0,true
