@@ -1,4 +1,0 @@
-TRANSPORTE;Ibarra-Quito;2026-11-04;10:00;5;10.0
-BOLETO;1;D;false
-BOLETO;2;I;true
-BOLETO;3;E;false
