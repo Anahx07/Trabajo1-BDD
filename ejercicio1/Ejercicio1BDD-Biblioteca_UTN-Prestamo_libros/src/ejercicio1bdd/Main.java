@@ -29,10 +29,6 @@ public class Main {
     private static final String ARCHIVO_PRESTAMOS = "prestamos.txt";
 
     public static void main(String[] args) {
-        System.out.println("==================================================");
-        System.out.println("   SISTEMA DE BIBLIOTECA UTN - GESTION DE PRESTAMOS");
-        System.out.println("==================================================");
-
         cargarDatosIniciales();
 
         boolean salir = false;
