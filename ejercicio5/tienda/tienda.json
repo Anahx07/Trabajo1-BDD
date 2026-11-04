@@ -1,0 +1,37 @@
+{
+  "artesanos": [
+    {
+      "id": "1",
+      "nombre": "Jose",
+      "comunidad": "Sagrario"
+    },
+    {
+      "id": "2",
+      "nombre": "Jose Farinango",
+      "comunidad": "Sagrario"
+    }
+  ],
+  "artesanias": [
+    {
+      "tipo": "TEXTIL",
+      "nombre": "Samarro",
+      "cantidad": 33,
+      "precio": 150.0,
+      "artesanoId": "2",
+      "fechaRecepcion": "2026-11-03",
+      "marcadaParaDevolucion": false,
+      "movimientos": [
+        {
+          "tipo": "RECEPCION",
+          "cantidad": 45,
+          "fecha": "2026-11-03"
+        },
+        {
+          "tipo": "VENTA",
+          "cantidad": 12,
+          "fecha": "2026-11-03"
+        }
+      ]
+    }
+  ]
+}
