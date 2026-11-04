@@ -1,3 +1,4 @@
+
 build/
 dist/
 *.class
@@ -7,3 +8,10 @@ dist/
 
 nbproject/private/
 */nbproject/private/
+=======
+build/ 
+dist/ 
+*.class 
+nbproject/private/ 
+/ejercicio2/Ejercicio2Cooperativa/nbproject/private/
+/Documentos
