@@ -2,7 +2,7 @@ package com.example;
 
 public class DetalleReceta {
     private Ingrediente ingrediente;
-    private double cantidad;
+    private double cantidad; 
 
     public DetalleReceta(Ingrediente ingrediente, double cantidad) {
         this.ingrediente = ingrediente;
