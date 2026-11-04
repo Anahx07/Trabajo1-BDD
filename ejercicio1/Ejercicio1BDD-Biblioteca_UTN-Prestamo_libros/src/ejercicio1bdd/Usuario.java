@@ -49,7 +49,7 @@ public class Usuario {
             return "Tiene una multa pendiente de $" + String.format("%.2f", this.multaPendiente);
         }
         if (this.prestamosActivos >= MAX_PRESTAMOS_ACTIVOS) {
-            return "Ha alcanzado el límite máximo de " + MAX_PRESTAMOS_ACTIVOS + " préstamos activos";
+            return "Ha alcanzado el limite maximo de " + MAX_PRESTAMOS_ACTIVOS + " prestamos activos";
         }
         return "Habilitado";
     }
@@ -160,9 +160,9 @@ public class Usuario {
                 "ID='" + idUsuario + '\'' +
                 ", Nombre='" + nombre + '\'' +
                 ", Carrera='" + carrera + '\'' +
-                ", Préstamos Activos=" + prestamosActivos + "/" + MAX_PRESTAMOS_ACTIVOS +
+                ", Prestamos Activos=" + prestamosActivos + "/" + MAX_PRESTAMOS_ACTIVOS +
                 ", Multa Pendiente=$" + String.format("%.2f", multaPendiente) +
-                ", Habilitado=" + (puedePrestar() ? "SÍ" : "NO (" + getMotivoBloqueo() + ")") +
+                ", Habilitado=" + (puedePrestar() ? "SI" : "NO (" + getMotivoBloqueo() + ")") +
                 ']';
     }
 }

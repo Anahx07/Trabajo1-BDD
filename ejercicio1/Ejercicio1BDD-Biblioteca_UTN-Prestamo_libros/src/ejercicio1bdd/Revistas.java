@@ -179,13 +179,13 @@ public class Revistas {
     public String toString() {
         return "Revista [" +
                 "ID='" + id + '\'' +
-                ", Título='" + titulo + '\'' +
-                ", Edición N°=" + numeroEdicion +
+                ", Titulo='" + titulo + '\'' +
+                ", Edicion N=" + numeroEdicion +
                 ", ISSN='" + issn + '\'' +
-                ", Año=" + anioPublicacion +
+                ", Anio=" + anioPublicacion +
                 ", Disponibles=" + ejemplaresDisponibles + "/" + ejemplaresTotales +
-                ", Días préstamo=" + DIAS_PRESTAMO +
-                ", Multa/día=$" + MULTA_POR_DIA +
+                ", Dias prestamo=" + DIAS_PRESTAMO +
+                ", Multa/dia=$" + MULTA_POR_DIA +
                 ']';
     }
 }

@@ -257,12 +257,12 @@ public class Prestamo {
                 "ID='" + idPrestamo + '\'' +
                 ", Usuario='" + idUsuario + '\'' +
                 ", Ejemplar='" + codigoEjemplar + '\'' +
-                ", Título='" + tituloMaterial + '\'' +
+                ", Titulo='" + tituloMaterial + '\'' +
                 ", Tipo=" + tipoMaterial +
-                ", Fecha Préstamo=" + fechaPrestamo +
-                ", Fecha Límite=" + fechaLimite +
+                ", Fecha Prestamo=" + fechaPrestamo +
+                ", Fecha Limite=" + fechaLimite +
                 ", Estado=" + estado +
-                (isDevuelto() ? ", Fecha Devolución=" + fechaDevolucion + ", Retraso=" + diasRetraso + " días, Multa=$" + String.format("%.2f", multaGenerada) : "") +
+                (isDevuelto() ? ", Fecha Devolucion=" + fechaDevolucion + ", Retraso=" + diasRetraso + " dias, Multa=$" + String.format("%.2f", multaGenerada) : "") +
                 ']';
     }
 }

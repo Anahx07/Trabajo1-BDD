@@ -179,13 +179,13 @@ public class Libros {
     public String toString() {
         return "Libro [" +
                 "ID='" + id + '\'' +
-                ", Título='" + titulo + '\'' +
+                ", Titulo='" + titulo + '\'' +
                 ", Autor='" + autor + '\'' +
                 ", Editorial='" + editorial + '\'' +
-                ", Año=" + anioPublicacion +
+                ", Anio=" + anioPublicacion +
                 ", Disponibles=" + ejemplaresDisponibles + "/" + ejemplaresTotales +
-                ", Días préstamo=" + DIAS_PRESTAMO +
-                ", Multa/día=$" + MULTA_POR_DIA +
+                ", Dias prestamo=" + DIAS_PRESTAMO +
+                ", Multa/dia=$" + MULTA_POR_DIA +
                 ']';
     }
 }

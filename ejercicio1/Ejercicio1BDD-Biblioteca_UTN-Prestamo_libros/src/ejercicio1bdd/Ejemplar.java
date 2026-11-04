@@ -127,11 +127,11 @@ public class Ejemplar {
     @Override
     public String toString() {
         return "Ejemplar [" +
-                "Código='" + codigoEjemplar + '\'' +
-                ", Título='" + tituloMaterial + '\'' +
+                "Codigo='" + codigoEjemplar + '\'' +
+                ", Titulo='" + tituloMaterial + '\'' +
                 ", Tipo=" + tipoMaterial +
                 ", Estado=" + (disponible ? "DISPONIBLE" : "PRESTADO") +
-                ", Ubicación='" + ubicacion + '\'' +
+                ", Ubicacion='" + ubicacion + '\'' +
                 ']';
     }
 }
