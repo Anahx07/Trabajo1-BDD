@@ -13,7 +13,7 @@
 - Marilin Martinez
 - Tupak Cachimuel
 - Jeremy Luna
-- Integrante 5
+- Robinho Liquinchano
 - Integrante 6
 
 ---
